@@ -1,0 +1,54 @@
+<h2>
+    Entrez 5 chiffres dans les cases çi dessous et choissisez l'ordre de tri, puis cliquez sur "Trier!".
+</h2>
+
+<div class="input-container">
+    <mat-form-field  width="100%">
+        <input matInput type="number" [(ngModel)]="value1">
+        <button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=0">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="value2">
+        <button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=0">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="value3">
+        <button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=0">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="value4">
+        <button *ngIf="value4" matSuffix mat-icon-button aria-label="Clear" (click)="value4=0">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="number" [(ngModel)]="value5">
+        <button *ngIf="value5" matSuffix mat-icon-button aria-label="Clear" (click)="value5=0">
+        <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+
+<div class="buttons-container" >
+    <mat-button-toggle-group [(ngModel)]="ordre">
+        <mat-button-toggle value="croissant">Ordre Croissant</mat-button-toggle>
+        <mat-button-toggle value="decroissant">Ordre Décroissant</mat-button-toggle>
+    </mat-button-toggle-group>
+    <button mat-raised-button class="sort-button" color="primary" (click)="trier()">Trier !</button>
+</div>
+
+<div *ngIf="response">
+    <h2>Votre liste triée par ordre {{liste.ordre}}:</h2>
+    <h2>{{pretty_list}}</h2>
+
+</div>

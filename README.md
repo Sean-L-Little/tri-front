@@ -1,5 +1,8 @@
 # TriFront
 
+Pour le front du webapp de tri, j'ai choisi Angular, c'est la framework que je connais le plus pour le front. J'aime beaucoup d'intégration de TS et la facilité d'usage des components Material UI.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
 ## Development server

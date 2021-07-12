@@ -2,6 +2,18 @@
 
 Pour le front du webapp de tri, j'ai choisi Angular, c'est la framework que je connais le plus pour le front. J'aime beaucoup d'intégration de TS et la facilité d'usage des components Material UI.
 
+Il suffit de rentrer les 5 chiffres que l'on souhaite trier, des entiers ou bien des décimaux et de choisir l'ordre de tri avant de cliquer sur le bouton pour trier. Pour voir les Listes Triées anciennes, on peut se naviguer vers l'onglet "Historique" où l'on trouve une table regroupant toutes les anciennes listes.
+
+Afin d'éviter les problèmes avec les accents, j'en ai pas mis pour le mot "décroissant" partout dans le code.
+
+Le Front envois la liste sous forme d'un objet avec 2 champs:
+- ```'ordre' : string``` Qui peut avoir la valeur "croissant" ou "decroissant"
+- ```'liste' : Array<number>``` La liste des entiers sous forme d'un array.
+
+Cet objet est JSONifié et envoyé sur l'api.
+
+La réponse de la requête POST est un JSON avec l'objet de la liste triée, c'est la même chose que l'objet envoyé mais il y a également l'ID et la liste est maintenant triée dans l'ordre souhaité.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
